@@ -3,8 +3,8 @@
 # By Rahim Khoja (rahimk@khojacorp.com)
 
 # Default Wallet Address & Pool Host Values
-defaultwal=42VxjBpfi4TS6KFjNrrKo3QLcyK7gBGfM9w7DxmGRcocYnEbJ1hhZWXfaHJtCXBxnL74DpkioPSivjRYU8qkt59s3EaHUU3
-defaulthost=monero.hiive.biz:3333
+defaultwal= 42zZCLkD6VV73LX1u7fRnQ2STLXutXZMhEFp74LncVf2MnNrYD4xoXufa26zbdkttndxfWnJeZqYQVaHTYU2kohrUrhnTqG
+defaulthost= vegas-backup.xmrpool.net:3333
 
 # Get Wallet Address
 finish="-1"
@@ -64,30 +64,25 @@ if [  "$CONT" != "y" ]; then
 fi
 echo
 echo "Installing Monero Miner"
-  
+
 # Update & Upgrade Apt
 sudo apt-get -y update && sudo apt-get -y upgrade
 
 # Install Required Packages via APT
 sudo apt-get -y install git wget build-essential autotools-dev libcurl3 automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev make g++
+sudo apt -y install libmicrohttpd-dev cmake libhwloc-dev
 
-# Download Latest Source of Wold9466 Miner
-git clone https://github.com/wolf9466/cpuminer-multi
+#Download Latest Source of XMR-STAK miner
+git clone https://github.com/fireice-uk/xmr-stak.git
 
-# Download Latest Source of Tpruvot Miner
-# This runs a little slower than Wolf from my tests
-# git clone https://github.com/tpruvot/cpuminer-multi
+#Make build Directory
+mkdir xmr-stak/build
 
 # Change to Miner Directory
-cd cpuminer-multi/
-
-# Remove Last Miner Compile Attempt 
-sudo make clean
+cd xmr-stak/build
 
 # Compile Miner
-./autogen.sh
-CFLAGS="-march=native" ./configure
-make
+cmake ..
 
 # Install Miner
 sudo make install

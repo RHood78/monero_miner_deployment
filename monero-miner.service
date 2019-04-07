@@ -6,7 +6,7 @@ After=network.target network-online.target
 [Service]
 Type=simple
 WorkingDirectory=/tmp
-ExecStart=/usr/local/bin/minerd -a cryptonight -o stratum+tcp://mineaddress -u walletaddress -p x
+ExecStart=/usr/local/bin/xmr-stak --currency monero -o mineaddress -u walletaddress -p x
 Restart=always
 User=root
 
