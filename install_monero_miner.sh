@@ -3,8 +3,8 @@
 # By Rahim Khoja (rahimk@khojacorp.com)
 
 # Default Wallet Address & Pool Host Values
-defaultwal= 42zZCLkD6VV73LX1u7fRnQ2STLXutXZMhEFp74LncVf2MnNrYD4xoXufa26zbdkttndxfWnJeZqYQVaHTYU2kohrUrhnTqG
-defaulthost= vegas-backup.xmrpool.net:3333
+defaultwal=42zZCLkD6VV73LX1u7fRnQ2STLXutXZMhEFp74LncVf2MnNrYD4xoXufa26zbdkttndxfWnJeZqYQVaHTYU2kohrUrhnTqG
+defaulthost=vegas-backup.xmrpool.net:3333
 
 # Get Wallet Address
 finish="-1"
