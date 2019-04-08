@@ -6,7 +6,7 @@ After=network.target network-online.target
 [Service]
 Type=simple
 WorkingDirectory=/tmp
-ExecStart=/usr/local/bin/xmr-stak --currency monero -o mineaddress -u walletaddress -p x
+ExecStart=./home/$USER/xmr-stak/build/bin/xmr-stak
 Restart=always
 User=root
 

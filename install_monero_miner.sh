@@ -85,10 +85,10 @@ cd xmr-stak/build
 cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF
 
 # Install Miner
-sudo make install
+make install
 
 # Change to Monero Miner Deployment Directory
-cd ~/monero_miner_deployment
+cd bin
 
 # Copy Miner Service File
 sudo /bin/bash -c "cp $(pwd -P)/monero-miner.service /lib/systemd/system/"
