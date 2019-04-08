@@ -82,10 +82,10 @@ mkdir xmr-stak/build
 cd xmr-stak/build
 
 # Compile Miner
-cmake ..
+cmake .. -DCUDA_ENABLE=OFF
 
 # Install Miner
-sudo make install -DCUDA_ENABLE=OFF
+sudo make install
 
 # Change to Monero Miner Deployment Directory
 cd ~/monero_miner_deployment
