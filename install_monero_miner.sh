@@ -95,7 +95,7 @@ make install
 ## if u get error 'CL/cl.h: No such file or directory', try: sudo apt-get install opencl-headers
 
 #copy miner for systemd use
-cd bin
+cd ~/monero_miner_deployment/xmr-stak/build/bin
 cp bin/xmr-stak /usr/local/bin/xmr-stak # so system can execute
 #/usr/local/bin/xmr-stak -c ~/xmr-stak/config.txt
 
