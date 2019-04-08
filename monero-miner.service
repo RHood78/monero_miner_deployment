@@ -5,10 +5,10 @@ After=network.target network-online.target
 
 [Service]
 Type=simple
-WorkingDirectory=/tmp
-ExecStart=./home/$USER/xmr-stak/build/bin/xmr-stak
-Restart=always
-User=root
+GuessMainPID=no
+ExecStart=/usr/local/bin/xmr-stak -c ~/xmr-stak/config.txt
+Restart=on-failure
+User=$USER
 
 [Install]
 WantedBy=multi-user.target
