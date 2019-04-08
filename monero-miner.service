@@ -6,9 +6,9 @@ After=network.target network-online.target
 [Service]
 Type=simple
 GuessMainPID=no
-ExecStart=/usr/local/bin/xmr-stak -c ~/xmr-stak/config.txt
+ExecStart=/usr/local/bin/xmr-stak -c /usr/local/bin/xmr-stak/config.txt
 Restart=on-failure
-User=$USER
+User=root
 
 [Install]
 WantedBy=multi-user.target
