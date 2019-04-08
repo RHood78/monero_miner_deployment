@@ -82,7 +82,7 @@ mkdir xmr-stak/build
 cd xmr-stak/build
 
 # Compile Miner
-cmake .. -DCUDA_ENABLE=OFF
+cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF
 
 # Install Miner
 sudo make install
